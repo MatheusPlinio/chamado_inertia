@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $chamados = Chamado::all();
+        $chamados = Chamado::orderBy('created_at', 'desc')->paginate(10);
         return Inertia::render('Home', ['chamados' => $chamados]);
     }
 
@@ -32,7 +32,8 @@ class HomeController extends Controller
         return redirect()->route('index.home');
     }
 
-    public function destroy(Chamado $chamado) {
+    public function destroy(Chamado $chamado)
+    {
         $chamado->delete();
 
         return redirect()->route('index.home')->with('message', 'Chamado exluido');
