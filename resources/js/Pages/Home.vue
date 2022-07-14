@@ -51,7 +51,7 @@ export default {
             this.$inertia.delete(`/destroy/${id}`, this.form);
         }
     },
-    components: { Layout, Pagination }
+    components: { Layout, Pagination },
 }
 </script>
 

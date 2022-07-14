@@ -5679,7 +5679,8 @@ var render = function render() {
     staticClass: "form-control",
     attrs: {
       type: "text",
-      id: "titulo"
+      id: "titulo",
+      placeholder: "Qual o Chamado?"
     },
     domProps: {
       value: _vm.form.titulo
@@ -5708,7 +5709,8 @@ var render = function render() {
     staticClass: "form-control",
     attrs: {
       type: "text",
-      id: "solicitacao"
+      id: "solicitacao",
+      placeholder: "Qual a Solicitação?"
     },
     domProps: {
       value: _vm.form.solicitacao
@@ -5752,6 +5754,10 @@ var render = function render() {
       }
     }
   }, [_c("option", {
+    domProps: {
+      value: null
+    }
+  }, [_vm._v("Pendente")]), _vm._v(" "), _c("option", {
     attrs: {
       value: "1"
     }
@@ -5785,6 +5791,10 @@ var render = function render() {
       }
     }
   }, [_c("option", {
+    domProps: {
+      value: null
+    }
+  }, [_vm._v("Qual a Prioridade?")]), _vm._v(" "), _c("option", {
     attrs: {
       value: "1"
     }
@@ -5812,7 +5822,8 @@ var render = function render() {
     staticClass: "form-control",
     attrs: {
       type: "text",
-      id: "solicitante"
+      id: "solicitante",
+      placeholder: "Quem solicitou?"
     },
     domProps: {
       value: _vm.form.solicitante
@@ -5840,7 +5851,8 @@ var render = function render() {
     staticClass: "form-control",
     attrs: {
       type: "text",
-      id: "setor"
+      id: "setor",
+      placeholder: "Qual o Setor?"
     },
     domProps: {
       value: _vm.form.setor
@@ -5870,6 +5882,7 @@ var staticRenderFns = [function () {
     staticClass: "form-control",
     attrs: {
       type: "date",
+      disabled: "",
       id: "data"
     }
   })]);
